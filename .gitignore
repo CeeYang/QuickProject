@@ -2,4 +2,4 @@
 .DS_Store
 
 # 忽略 pods 中源码,下载代码后自行安装 pod install
-pods/
+Pods/
