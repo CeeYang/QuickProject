@@ -17,16 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *btn = [UIButton new];
-    [btn setTitle:@"Click Me" forState:UIControlStateNormal];
-    [btn setBackgroundColor:[UIColor lightGrayColor]];
-    btn.layer.cornerRadius = 10;
-    btn.layer.masksToBounds = true;
-    [btn addTarget:self action:@selector(btnButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: btn];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_greaterThanOrEqualTo(60);
-        make.height.mas_equalTo(44);
+    YYLabel *welcomeLabel = [YYLabel new];
+    welcomeLabel.text = @"Welcom to QuickProject Demo,\n You can use the demo do what you wanna do ";
+    welcomeLabel.numberOfLines = 0;
+    welcomeLabel.textAlignment = NSTextAlignmentCenter;
+    welcomeLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+    [self.view addSubview: welcomeLabel];
+    [welcomeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self.view);
     }];
     
