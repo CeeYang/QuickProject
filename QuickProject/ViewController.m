@@ -26,7 +26,6 @@
     [welcomeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self.view);
     }];
-    
 }
 
 - (void)btnButtonAction
